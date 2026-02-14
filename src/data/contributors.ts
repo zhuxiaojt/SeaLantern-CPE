@@ -61,6 +61,12 @@ export const contributors: Contributor[] = [
     avatar: "https://minotar.net/avatar/MinecraftYJQ_/64",
     url: "https://gitee.com/minecraftyjq",
   },
+  {
+    name: "HKYZYH",
+    role: "修复Wayland协议下白屏问题",
+    avatar: "https://minotar.net/avatar/HKYZYH/64",
+    url: "https://gitee.com/HKYZYHgezi",
+  },
 
   
   // ============================================
