@@ -41,5 +41,7 @@ window-vibrancy = "0.5"
 font-kit = "0.14"
 sysinfo = "0.32"
 regex = "1.10"
+futures = "0.3.32"
+indicatif = "0.18.4"
 [target.'cfg(windows)'.dependencies]
 winreg = "0.52"
