@@ -45,7 +45,7 @@
     "detail_view": "Switch to detail view",
     "gauge_view": "Switch to gauge view",
     "recent_alerts": "Recent Warnings / Errors",
-    "delete_confirm_message": "Please enter the server name <strong>{server}</strong> to confirm deletion",
+    "delete_confirm_message": "Please enter server name {{server}} to confirm deletion",
     "delete_input_placeholder": "Enter server name",
     "delete_cancel": "Cancel",
     "delete_confirm": "Confirm Delete",
@@ -345,7 +345,11 @@
     "color_hue": "Hue",
     "color_saturation": "Saturation",
     "color_lightness": "Lightness",
-    "color_alpha": "Alpha"
+    "color_alpha": "Alpha",
+    "developer_mode": "Developer Mode",
+    "developer_mode_desc": "Enable advanced features and debug tools",
+    "developer_mode_toggle": "Open Developer Mode",
+    "developer_mode_toggle_desc": "Enable to use debug tools when in developer mode"
   },
   "about": {
     "title": "About",

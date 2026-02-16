@@ -45,7 +45,7 @@
     "detail_view": "切换到详细视图",
     "gauge_view": "切换到仪表盘",
     "recent_alerts": "最近警告 / 错误",
-    "delete_confirm_message": "请输入服务器名称 <strong>{server}</strong> 以确认删除",
+    "delete_confirm_message": "请输入服务器名称 {{server}} 以确认删除",
     "delete_input_placeholder": "输入服务器名称",
     "delete_cancel": "取消",
     "delete_confirm": "确认删除",
@@ -340,7 +340,11 @@
     "color_hue": "色相",
     "color_saturation": "饱和度",
     "color_lightness": "亮度",
-    "color_alpha": "透明度"
+    "color_alpha": "透明度",
+    "developer_mode": "开发者模式",
+    "developer_mode_desc": "启动高级功能和调试选项",
+    "developer_mode_toggle": "启动开发者模式",
+    "developer_mode_toggle_desc": "启用后将允许使用调试工具"
   },
   "about": {
     "title": "关于",
