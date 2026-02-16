@@ -87,8 +87,8 @@ function selectServer(serverId: string) {
 function updateNavIndicator() {
   nextTick(() => {
     if (!navIndicator.value) return;
-    
-    const activeNavItem = document.querySelector('.nav-item.active');
+
+    const activeNavItem = document.querySelector(".nav-item.active");
     if (activeNavItem) {
       const { offsetTop, offsetHeight } = activeNavItem as HTMLElement;
       navIndicator.value.style.top = `${offsetTop + (offsetHeight - 16) / 2}px`;
@@ -97,47 +97,55 @@ function updateNavIndicator() {
 }
 
 // 监听侧边栏折叠状态变化，更新指示器位置
-watch(() => ui.sidebarCollapsed, () => {
-  // 延迟更新，确保动画完成后再计算位置
-  setTimeout(() => {
-    updateNavIndicator();
-  }, 300); // 等待300ms，确保CSS过渡动画完成
-});
+watch(
+  () => ui.sidebarCollapsed,
+  () => {
+    // 延迟更新，确保动画完成后再计算位置
+    setTimeout(() => {
+      updateNavIndicator();
+    }, 300); // 等待300ms，确保CSS过渡动画完成
+  },
+);
 
 // 监听路由变化，更新指示器位置
-watch(() => route.path, () => {
-  updateNavIndicator();
-});
+watch(
+  () => route.path,
+  () => {
+    updateNavIndicator();
+  },
+);
 
 // 组件挂载后初始化指示器位置
 onMounted(() => {
   updateNavIndicator();
-  
+
   // 添加全局点击事件监听器，点击外部关闭气泡
-  document.addEventListener('click', handleClickOutside);
+  document.addEventListener("click", handleClickOutside);
 });
 
 // 点击外部关闭服务器选择气泡
 function handleClickOutside(event: MouseEvent) {
   if (showServerBubble.value) {
-    const bubble = document.querySelector('.server-select-bubble');
-    const trigger = document.querySelector('.server-selector-icon');
-    
+    const bubble = document.querySelector(".server-select-bubble");
+    const trigger = document.querySelector(".server-selector-icon");
+
     if (bubble && trigger) {
       const bubbleRect = bubble.getBoundingClientRect();
       const triggerRect = trigger.getBoundingClientRect();
-      
+
       // 检查点击是否在气泡或触发按钮之外
-      const clickedInsideBubble = event.clientX >= bubbleRect.left && 
-                                event.clientX <= bubbleRect.right && 
-                                event.clientY >= bubbleRect.top && 
-                                event.clientY <= bubbleRect.bottom;
-      
-      const clickedInsideTrigger = event.clientX >= triggerRect.left && 
-                                 event.clientX <= triggerRect.right && 
-                                 event.clientY >= triggerRect.top && 
-                                 event.clientY <= triggerRect.bottom;
-      
+      const clickedInsideBubble =
+        event.clientX >= bubbleRect.left &&
+        event.clientX <= bubbleRect.right &&
+        event.clientY >= bubbleRect.top &&
+        event.clientY <= bubbleRect.bottom;
+
+      const clickedInsideTrigger =
+        event.clientX >= triggerRect.left &&
+        event.clientX <= triggerRect.right &&
+        event.clientY >= triggerRect.top &&
+        event.clientY <= triggerRect.bottom;
+
       if (!clickedInsideBubble && !clickedInsideTrigger) {
         showServerBubble.value = false;
       }
@@ -281,8 +289,8 @@ const iconMap: Record<string, string> = {
             <h3>选择服务器</h3>
           </div>
           <div class="server-select-bubble-body">
-            <div 
-              v-for="option in serverOptions" 
+            <div
+              v-for="option in serverOptions"
               :key="option.value"
               class="server-select-option"
               :class="{ active: option.value === currentServerId }"
@@ -291,7 +299,6 @@ const iconMap: Record<string, string> = {
               {{ option.label }}
             </div>
           </div>
-
         </div>
       </div>
     </Transition>
@@ -530,8 +537,6 @@ const iconMap: Record<string, string> = {
   max-height: 300px;
   overflow-y: auto;
 }
-
-
 
 .server-select-option {
   padding: 10px 14px;

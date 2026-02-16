@@ -40,37 +40,37 @@ const bgBrightness = ref("1.0");
 const uiFontSize = ref("14");
 
 const backgroundSizeOptions = [
-  { label: i18n.t('settings.background_size_options.cover'), value: "cover" },
-  { label: i18n.t('settings.background_size_options.contain'), value: "contain" },
-  { label: i18n.t('settings.background_size_options.fill'), value: "fill" },
-  { label: i18n.t('settings.background_size_options.auto'), value: "auto" },
+  { label: i18n.t("settings.background_size_options.cover"), value: "cover" },
+  { label: i18n.t("settings.background_size_options.contain"), value: "contain" },
+  { label: i18n.t("settings.background_size_options.fill"), value: "fill" },
+  { label: i18n.t("settings.background_size_options.auto"), value: "auto" },
 ];
 
 const colorOptions = [
-  { label: i18n.t('settings.color_options.default'), value: "default" },
-  { label: i18n.t('settings.color_options.midnight'), value: "midnight" },
-  { label: i18n.t('settings.color_options.forest'), value: "forest" },
-  { label: i18n.t('settings.color_options.sunset'), value: "sunset" },
-  { label: i18n.t('settings.color_options.ocean'), value: "ocean" },
-  { label: i18n.t('settings.color_options.rose'), value: "rose" },
-  { label: i18n.t('settings.color_options.custom'), value: "custom" },
+  { label: i18n.t("settings.color_options.default"), value: "default" },
+  { label: i18n.t("settings.color_options.midnight"), value: "midnight" },
+  { label: i18n.t("settings.color_options.forest"), value: "forest" },
+  { label: i18n.t("settings.color_options.sunset"), value: "sunset" },
+  { label: i18n.t("settings.color_options.ocean"), value: "ocean" },
+  { label: i18n.t("settings.color_options.rose"), value: "rose" },
+  { label: i18n.t("settings.color_options.custom"), value: "custom" },
 ];
 
 const editColorOptions = [
-  { label: i18n.t('settings.edit_colorplan_options.light'), value: "light" },
-  { label: i18n.t('settings.edit_colorplan_options.dark'), value: "dark" },
-  { label: i18n.t('settings.edit_colorplan_options.light_acrylic'), value: "light_acrylic" },
-  { label: i18n.t('settings.edit_colorplan_options.dark_acrylic'), value: "dark_acrylic" },
+  { label: i18n.t("settings.edit_colorplan_options.light"), value: "light" },
+  { label: i18n.t("settings.edit_colorplan_options.dark"), value: "dark" },
+  { label: i18n.t("settings.edit_colorplan_options.light_acrylic"), value: "light_acrylic" },
+  { label: i18n.t("settings.edit_colorplan_options.dark_acrylic"), value: "dark_acrylic" },
 ];
 
 const themeOptions = [
-  { label: i18n.t('settings.theme_options.auto'), value: "auto" },
-  { label: i18n.t('settings.theme_options.light'), value: "light" },
-  { label: i18n.t('settings.theme_options.dark'), value: "dark" },
+  { label: i18n.t("settings.theme_options.auto"), value: "auto" },
+  { label: i18n.t("settings.theme_options.light"), value: "light" },
+  { label: i18n.t("settings.theme_options.dark"), value: "dark" },
 ];
 
 const fontFamilyOptions = ref<{ label: string; value: string }[]>([
-  { label: i18n.t('settings.font_family_default'), value: "" },
+  { label: i18n.t("settings.font_family_default"), value: "" },
 ]);
 
 const showImportModal = ref(false);
@@ -764,7 +764,7 @@ async function loadSystemFonts() {
   try {
     const fonts = await getSystemFonts();
     fontFamilyOptions.value = [
-      { label: i18n.t('settings.font_family_default'), value: "" },
+      { label: i18n.t("settings.font_family_default"), value: "" },
       ...fonts.map((font) => ({ label: font, value: `'${font}'` })),
     ];
   } catch (e) {
@@ -1364,7 +1364,7 @@ async function saveSettings() {
   error.value = null;
   try {
     await settingsApi.save(settings.value);
-    success.value = i18n.t('settings.saved');
+    success.value = i18n.t("settings.saved");
     hasChanges.value = false;
     setTimeout(() => (success.value = null), 3000);
 
@@ -1402,7 +1402,7 @@ async function resetSettings() {
     showResetConfirm.value = false;
     hasChanges.value = false;
     settings.value.color = "default";
-    success.value = i18n.t('settings.reset_success');
+    success.value = i18n.t("settings.reset_success");
     setTimeout(() => (success.value = null), 3000);
     applyTheme(s.theme);
     applyFontSize(s.font_size);
@@ -1416,7 +1416,7 @@ async function exportSettings() {
   try {
     const json = await settingsApi.exportJson();
     await navigator.clipboard.writeText(json);
-    success.value = i18n.t('settings.export_success');
+    success.value = i18n.t("settings.export_success");
     setTimeout(() => (success.value = null), 3000);
   } catch (e) {
     error.value = String(e);
@@ -1425,7 +1425,7 @@ async function exportSettings() {
 
 async function handleImport() {
   if (!importJson.value.trim()) {
-    error.value = i18n.t('settings.no_json');
+    error.value = i18n.t("settings.no_json");
     return;
   }
   try {
@@ -1443,7 +1443,7 @@ async function handleImport() {
     showImportModal.value = false;
     importJson.value = "";
     hasChanges.value = false;
-    success.value = i18n.t('settings.import_success');
+    success.value = i18n.t("settings.import_success");
     setTimeout(() => (success.value = null), 3000);
     applyTheme(s.theme);
     applyFontSize(s.font_size);
@@ -1487,16 +1487,19 @@ function clearBackgroundImage() {
 
     <div v-if="loading" class="loading-state">
       <div class="spinner"></div>
-      <span>{{ i18n.t('settings.loading') }}</span>
+      <span>{{ i18n.t("settings.loading") }}</span>
     </div>
 
     <template v-else-if="settings">
-      <SLCard :title="i18n.t('settings.color_theme')" :subtitle="i18n.t('settings.color_theme_desc')">
+      <SLCard
+        :title="i18n.t('settings.color_theme')"
+        :subtitle="i18n.t('settings.color_theme_desc')"
+      >
         <div class="settings-group">
           <div class="setting-row">
             <div class="setting-info">
-              <span class="setting-label">{{ i18n.t('settings.use_preset_colortheme') }}</span>
-              <span class="setting-desc">{{ i18n.t('settings.use_preset_colortheme_desc') }}</span>
+              <span class="setting-label">{{ i18n.t("settings.use_preset_colortheme") }}</span>
+              <span class="setting-desc">{{ i18n.t("settings.use_preset_colortheme_desc") }}</span>
             </div>
             <div class="input-lg">
               <SLSelect
@@ -1510,8 +1513,8 @@ function clearBackgroundImage() {
         <div class="collapsible-section">
           <div class="collapsible-header" @click="colorSettingsExpanded = !colorSettingsExpanded">
             <div class="setting-info">
-              <span class="setting-label">{{ i18n.t('settings.color_editing') }}</span>
-              <span class="setting-desc">{{ i18n.t('settings.color_editing_desc') }}</span>
+              <span class="setting-label">{{ i18n.t("settings.color_editing") }}</span>
+              <span class="setting-desc">{{ i18n.t("settings.color_editing_desc") }}</span>
             </div>
             <div class="collapsible-toggle" :class="{ expanded: colorSettingsExpanded }">
               <svg
@@ -1530,8 +1533,10 @@ function clearBackgroundImage() {
             <div v-show="colorSettingsExpanded" class="collapsible-content">
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.current_edit_colorplan') }}</span>
-                  <span class="setting-desc">{{ i18n.t('settings.current_edit_colorplan_desc') }}</span>
+                  <span class="setting-label">{{ i18n.t("settings.current_edit_colorplan") }}</span>
+                  <span class="setting-desc">{{
+                    i18n.t("settings.current_edit_colorplan_desc")
+                  }}</span>
                 </div>
                 <div class="input-lg">
                   <SLSelect
@@ -1543,55 +1548,87 @@ function clearBackgroundImage() {
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.primary_background_color') }}</span>
+                  <span class="setting-label">{{
+                    i18n.t("settings.primary_background_color")
+                  }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="bgColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="bgColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div class="color-preview" :style="{ backgroundColor: bgColor }"></div>
                 </div>
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.secondary_background_color') }}</span>
+                  <span class="setting-label">{{
+                    i18n.t("settings.secondary_background_color")
+                  }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="bgSecondaryColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="bgSecondaryColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div class="color-preview" :style="{ backgroundColor: bgSecondaryColor }"></div>
                 </div>
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.tertiary_background_color') }}</span>
+                  <span class="setting-label">{{
+                    i18n.t("settings.tertiary_background_color")
+                  }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="bgTertiaryColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="bgTertiaryColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div class="color-preview" :style="{ backgroundColor: bgTertiaryColor }"></div>
                 </div>
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.primary_emphasis_color') }}</span>
+                  <span class="setting-label">{{ i18n.t("settings.primary_emphasis_color") }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="primaryColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="primaryColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div class="color-preview" :style="{ backgroundColor: primaryColor }"></div>
                 </div>
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.secondary_emphasis_color') }}</span>
+                  <span class="setting-label">{{
+                    i18n.t("settings.secondary_emphasis_color")
+                  }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="secondaryColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="secondaryColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div class="color-preview" :style="{ backgroundColor: secondaryColor }"></div>
                 </div>
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.text_primary_color') }}</span>
+                  <span class="setting-label">{{ i18n.t("settings.text_primary_color") }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="textPrimaryColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="textPrimaryColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div
                     class="color-preview"
                     :style="{ backgroundColor: textPrimaryColor, border: '1px solid #e2e8f0' }"
@@ -1600,10 +1637,14 @@ function clearBackgroundImage() {
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.text_secondary_color') }}</span>
+                  <span class="setting-label">{{ i18n.t("settings.text_secondary_color") }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="textSecondaryColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="textSecondaryColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div
                     class="color-preview"
                     :style="{ backgroundColor: textSecondaryColor, border: '1px solid #e2e8f0' }"
@@ -1612,10 +1653,14 @@ function clearBackgroundImage() {
               </div>
               <div class="setting-row">
                 <div class="setting-info">
-                  <span class="setting-label">{{ i18n.t('settings.border_color') }}</span>
+                  <span class="setting-label">{{ i18n.t("settings.border_color") }}</span>
                 </div>
                 <div class="input-lg color-input-container">
-                  <SLInput v-model="borderColor" type="text" :placeholder="i18n.t('settings.color_value')" />
+                  <SLInput
+                    v-model="borderColor"
+                    type="text"
+                    :placeholder="i18n.t('settings.color_value')"
+                  />
                   <div
                     class="color-preview"
                     :style="{ backgroundColor: borderColor, border: '1px solid #e2e8f0' }"
@@ -1631,10 +1676,8 @@ function clearBackgroundImage() {
         <div class="settings-group">
           <div class="setting-row">
             <div class="setting-info">
-              <span class="setting-label">{{ i18n.t('settings.theme') }}</span>
-              <span class="setting-desc"
-                >{{ i18n.t('settings.theme_desc') }}</span
-              >
+              <span class="setting-label">{{ i18n.t("settings.theme") }}</span>
+              <span class="setting-desc">{{ i18n.t("settings.theme_desc") }}</span>
             </div>
             <div class="input-lg">
               <SLSelect
@@ -1647,8 +1690,8 @@ function clearBackgroundImage() {
 
           <div class="setting-row">
             <div class="setting-info">
-              <span class="setting-label">{{ i18n.t('settings.font_size') }}</span>
-              <span class="setting-desc">{{ i18n.t('settings.font_size_desc') }}</span>
+              <span class="setting-label">{{ i18n.t("settings.font_size") }}</span>
+              <span class="setting-desc">{{ i18n.t("settings.font_size_desc") }}</span>
             </div>
             <div class="slider-control">
               <input
@@ -1666,10 +1709,8 @@ function clearBackgroundImage() {
 
           <div class="setting-row">
             <div class="setting-info">
-              <span class="setting-label">{{ i18n.t('settings.font_family') }}</span>
-              <span class="setting-desc"
-                >{{ i18n.t('settings.font_family_desc') }}</span
-              >
+              <span class="setting-label">{{ i18n.t("settings.font_family") }}</span>
+              <span class="setting-desc">{{ i18n.t("settings.font_family_desc") }}</span>
             </div>
             <div class="input-lg">
               <SLSelect
@@ -1686,12 +1727,12 @@ function clearBackgroundImage() {
 
           <div class="setting-row">
             <div class="setting-info">
-              <span class="setting-label">{{ i18n.t('settings.acrylic') }}</span>
+              <span class="setting-label">{{ i18n.t("settings.acrylic") }}</span>
               <span class="setting-desc">
                 {{
                   acrylicSupported
-                    ? i18n.t('settings.acrylic_desc')
-                    : i18n.t('settings.acrylic_not_supported')
+                    ? i18n.t("settings.acrylic_desc")
+                    : i18n.t("settings.acrylic_not_supported")
                 }}
               </span>
             </div>
@@ -1706,10 +1747,8 @@ function clearBackgroundImage() {
           <div class="collapsible-section">
             <div class="collapsible-header" @click="bgSettingsExpanded = !bgSettingsExpanded">
               <div class="setting-info">
-                <span class="setting-label">{{ i18n.t('settings.background') }}</span>
-                <span class="setting-desc"
-                  >{{ i18n.t('settings.background_desc') }}</span
-                >
+                <span class="setting-label">{{ i18n.t("settings.background") }}</span>
+                <span class="setting-desc">{{ i18n.t("settings.background_desc") }}</span>
               </div>
               <div class="collapsible-toggle" :class="{ expanded: bgSettingsExpanded }">
                 <svg
@@ -1731,7 +1770,7 @@ function clearBackgroundImage() {
                     <div v-if="settings.background_image" class="bg-preview">
                       <div v-if="bgPreviewLoading && !bgPreviewLoaded" class="bg-preview-loading">
                         <div class="loading-spinner"></div>
-                        <span>{{ i18n.t('settings.loading_preview') }}</span>
+                        <span>{{ i18n.t("settings.loading_preview") }}</span>
                       </div>
                       <img
                         v-show="bgPreviewLoaded || !bgPreviewLoading"
@@ -1749,19 +1788,19 @@ function clearBackgroundImage() {
                         v-if="isAnimatedImage(settings.background_image)"
                         class="bg-animated-badge"
                       >
-                        {{ i18n.t('settings.animated_image') }}
+                        {{ i18n.t("settings.animated_image") }}
                       </div>
                       <div class="bg-preview-overlay">
                         <span class="bg-preview-path">{{
                           settings.background_image.split("\\").pop()
                         }}</span>
-                        <SLButton variant="danger" size="sm" @click="clearBackgroundImage"
-                          >{{ i18n.t('settings.remove') }}</SLButton
-                        >
+                        <SLButton variant="danger" size="sm" @click="clearBackgroundImage">{{
+                          i18n.t("settings.remove")
+                        }}</SLButton>
                       </div>
                     </div>
                     <SLButton v-else variant="secondary" @click="pickBackgroundImage">
-                      {{ i18n.t('settings.pick_image') }}
+                      {{ i18n.t("settings.pick_image") }}
                     </SLButton>
                     <SLButton
                       v-if="settings.background_image"
@@ -1769,17 +1808,15 @@ function clearBackgroundImage() {
                       size="sm"
                       @click="pickBackgroundImage"
                     >
-                      {{ i18n.t('settings.replace_image') }}
+                      {{ i18n.t("settings.replace_image") }}
                     </SLButton>
                   </div>
                 </div>
 
                 <div class="setting-row">
                   <div class="setting-info">
-                    <span class="setting-label">{{ i18n.t('settings.opacity') }}</span>
-                    <span class="setting-desc"
-                      >{{ i18n.t('settings.opacity_desc') }}</span
-                    >
+                    <span class="setting-label">{{ i18n.t("settings.opacity") }}</span>
+                    <span class="setting-desc">{{ i18n.t("settings.opacity_desc") }}</span>
                   </div>
                   <div class="slider-control">
                     <input
@@ -1797,8 +1834,8 @@ function clearBackgroundImage() {
 
                 <div class="setting-row">
                   <div class="setting-info">
-                    <span class="setting-label">{{ i18n.t('settings.blur') }}</span>
-                    <span class="setting-desc">{{ i18n.t('settings.blur_desc') }}</span>
+                    <span class="setting-label">{{ i18n.t("settings.blur") }}</span>
+                    <span class="setting-desc">{{ i18n.t("settings.blur_desc") }}</span>
                   </div>
                   <div class="slider-control">
                     <input
@@ -1816,8 +1853,8 @@ function clearBackgroundImage() {
 
                 <div class="setting-row">
                   <div class="setting-info">
-                    <span class="setting-label">{{ i18n.t('settings.brightness') }}</span>
-                    <span class="setting-desc">{{ i18n.t('settings.brightness_desc') }}</span>
+                    <span class="setting-label">{{ i18n.t("settings.brightness") }}</span>
+                    <span class="setting-desc">{{ i18n.t("settings.brightness_desc") }}</span>
                   </div>
                   <div class="slider-control">
                     <input
@@ -1835,8 +1872,8 @@ function clearBackgroundImage() {
 
                 <div class="setting-row">
                   <div class="setting-info">
-                    <span class="setting-label">{{ i18n.t('settings.background_size') }}</span>
-                    <span class="setting-desc">{{ i18n.t('settings.background_size_desc') }}</span>
+                    <span class="setting-label">{{ i18n.t("settings.background_size") }}</span>
+                    <span class="setting-desc">{{ i18n.t("settings.background_size_desc") }}</span>
                   </div>
                   <div class="input-lg">
                     <SLSelect
@@ -1856,18 +1893,26 @@ function clearBackgroundImage() {
       <div class="settings-actions">
         <div class="actions-left">
           <SLButton variant="primary" size="lg" :loading="saving" @click="saveSettings">
-            {{ i18n.t('settings.save') }}
+            {{ i18n.t("settings.save") }}
           </SLButton>
-          <SLButton variant="secondary" @click="loadSettings">{{ i18n.t('settings.discard') }}</SLButton>
-          <span v-if="hasChanges" class="unsaved-hint">{{ i18n.t('settings.unsaved_changes') }}</span>
+          <SLButton variant="secondary" @click="loadSettings">{{
+            i18n.t("settings.discard")
+          }}</SLButton>
+          <span v-if="hasChanges" class="unsaved-hint">{{
+            i18n.t("settings.unsaved_changes")
+          }}</span>
         </div>
-        <div class="actions-right">{{ i18n.t('settings.personalize_page_import_export') }}</div>
+        <div class="actions-right">{{ i18n.t("settings.personalize_page_import_export") }}</div>
       </div>
     </template>
 
-    <SLModal :visible="showImportModal" :title="i18n.t('settings.import_settings')" @close="showImportModal = false">
+    <SLModal
+      :visible="showImportModal"
+      :title="i18n.t('settings.import_settings')"
+      @close="showImportModal = false"
+    >
       <div class="import-form">
-        <p class="text-caption">{{ i18n.t('settings.import_desc') }}</p>
+        <p class="text-caption">{{ i18n.t("settings.import_desc") }}</p>
         <textarea
           class="import-textarea"
           v-model="importJson"
@@ -1876,16 +1921,28 @@ function clearBackgroundImage() {
         ></textarea>
       </div>
       <template #footer>
-        <SLButton variant="secondary" @click="showImportModal = false">{{ i18n.t('settings.cancel') }}</SLButton>
-        <SLButton variant="primary" @click="handleImport">{{ i18n.t('settings.confirm_import') }}</SLButton>
+        <SLButton variant="secondary" @click="showImportModal = false">{{
+          i18n.t("settings.cancel")
+        }}</SLButton>
+        <SLButton variant="primary" @click="handleImport">{{
+          i18n.t("settings.confirm_import")
+        }}</SLButton>
       </template>
     </SLModal>
 
-    <SLModal :visible="showResetConfirm" :title="i18n.t('settings.reset_confirm')" @close="showResetConfirm = false">
-      <p class="text-body">{{ i18n.t('settings.reset_desc') }}</p>
+    <SLModal
+      :visible="showResetConfirm"
+      :title="i18n.t('settings.reset_confirm')"
+      @close="showResetConfirm = false"
+    >
+      <p class="text-body">{{ i18n.t("settings.reset_desc") }}</p>
       <template #footer>
-        <SLButton variant="secondary" @click="showResetConfirm = false">{{ i18n.t('settings.cancel') }}</SLButton>
-        <SLButton variant="danger" @click="resetSettings">{{ i18n.t('settings.confirm_reset') }}</SLButton>
+        <SLButton variant="secondary" @click="showResetConfirm = false">{{
+          i18n.t("settings.cancel")
+        }}</SLButton>
+        <SLButton variant="danger" @click="resetSettings">{{
+          i18n.t("settings.confirm_reset")
+        }}</SLButton>
       </template>
     </SLModal>
   </div>
