@@ -1,21 +1,18 @@
 <div align="center">
 	<img src="src/assets/logo.svg" alt="logo" width="200" height="200">
 
-# Sea Lantern (海晶灯)
+# Sea Lantern CPE (海晶灯社区平台版)
 
 A Minecraft Server Manager based on Tauri 2 + Rust + Vue 3
 
-| [![github-stars](https://img.shields.io/github/stars/SeaLantern-Studio/SeaLantern?style=flat&logo=github&label=Stars)](https://github.com/SeaLantern-Studio/SeaLantern/stargazers) | [![github-forks](https://img.shields.io/github/forks/SeaLantern-Studio/SeaLantern?style=flat&logo=github&label=Forks)](https://github.com/SeaLantern-Studio/SeaLantern/network/members) | [![github-latest](https://img.shields.io/github/v/release/SeaLantern-Studio/SeaLantern?style=flat&logo=github&label=Latest%20version)](https://github.com/SeaLantern-Studio/SeaLantern/releases/latest)                                                                                    |
+| [![github-stars](https://img.shields.io/github/stars/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Stars)](https://github.com/zhuxiaojt/SeaLantern-CPE/stargazers) | [![github-forks](https://img.shields.io/github/forks/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Forks)](https://github.com/zhuxiaojt/SeaLantern-CPE/network/members) | [![github-latest](https://img.shields.io/github/v/release/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Latest%20version)](https://github.com/zhuxiaojt/SeaLantern-CPE/releases/latest)                                                                                    |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![gitee-stars](https://gitee.com/fps_z/SeaLantern/badge/star.svg?theme=dark)](https://gitee.com/fps_z/SeaLantern/stargazers)                                                      | [![gitee-forks](https://gitee.com/fps_z/SeaLantern/badge/fork.svg?theme=dark)](https://gitee.com/fps_z/SeaLantern/members)                                                              | [![gitee-latest](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgitee.com%2Fapi%2Fv5%2Frepos%2FFPS_Z%2FSeaLantern%2Freleases%2Flatest&query=%24.tag_name&label=Latest%20version&color=brightgreen&logo=gitee&style=flat)](https://gitee.com/FPS_Z/SeaLantern/releases/latest) |
 
 <kbd>[简体中文](README.md)</kbd> <kbd>English</kbd>
 
 ---
 
 </div>
-
-![img](https://gitee.com/fps_z/markdown/raw/master/img/about2.png)
 
 ## What can it do?
 
@@ -27,7 +24,7 @@ A Minecraft Server Manager based on Tauri 2 + Rust + Vue 3
 
 ## Quick Start
 
-Download the software from [Releases](https://github.com/SeaLantern-Studio/SeaLantern/releases/latest);
+Download the software from [Releases](https://github.com/zhuxiaojt/SeaLantern-CPE/releases/latest);
 
 Import a server .jar, choose a Java version, then click Start. It's that simple.
 
@@ -36,8 +33,8 @@ Import a server .jar, choose a Java version, then click Start. It's that simple.
 You'll need Node.js 20+ and Rust 1.70+.
 
 ```bash
-git clone https://github.com/SeaLantern-Studio/SeaLantern.git
-cd SeaLantern
+git clone https://github.com/zhuxiaojt/SeaLantern-CPE.git
+cd SeaLantern-CPE
 npm install
 npm run tauri dev
 ```
@@ -105,7 +102,7 @@ See [Project Structure](docs/STRUCTURE-en.md).
 Placeholders have been reserved for these features with existing code
 skeletons—waiting for your contributions:
 
-- Download Center - Download server cores, plugins and mods
+- Download Center - Download server cores, Minecraft versions, plugins and mods
 - Backup Management - Incremental backup and restore of save files
 - Intranet Penetration - FRP integration
 - Scheduled Tasks - Automatic restarts, scheduled backups, and scheduled commands
@@ -155,25 +152,17 @@ The frontend and backend each have 3 files, plus one line each for the router an
 
 ### i18n — Internationalization Guide
 
-Sea Lantern supports multiple languages, including Simplified Chinese, Traditional Chinese and English. See the i18n guide: [src/language/README-en.md](src/language/README-en.md)
+Sea Lantern CPE supports multiple languages, including Simplified Chinese, Traditional Chinese and English. See the i18n guide: [src/language/README-en.md](src/language/README-en.md)
 
 ## License
 
 [GNU General Public License v3.0](LICENSE)
 
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=SeaLantern-Studio/SeaLantern&type=Date)](https://star-history.com/#SeaLantern-Studio/SeaLantern&Date)
-
-## Contributors
-
-Thanks to everyone who contributed to Sea Lantern!
-
-[![Contributors](https://sealentern-contributors.sb4893.workers.dev/)](https://github.com/SeaLantern-Studio/SeaLantern/graphs/contributors)
+This project is a derivative work of [SeaLantern](https://github.com/SeaLantern-Studio/SeaLantern), following the GPLv3 license.
 
 ## Acknowledgments
 
-Sea Lantern is an open source project under the GPLv3 license.
+Sea Lantern CPE is an open source project under the GPLv3 license.
 
 Minecraft is a trademark of Mojang AB.
 This project is not approved or associated with Mojang or Microsoft.
