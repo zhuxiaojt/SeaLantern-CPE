@@ -133,7 +133,7 @@ async function handleManualDownload() {
     </div>
     <div>
       <b class="info-label">{{ i18n.t("about.disclaimer") }}</b>
-      <br>
+      <br />
       <span class="info-value">{{ i18n.t("about.disclaimer_text") }}</span>
     </div>
   </SLCard>
