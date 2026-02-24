@@ -5,6 +5,7 @@ import { useUiStore } from "@stores/uiStore";
 import { useServerStore } from "@stores/serverStore";
 import { usePluginStore } from "@stores/pluginStore";
 import { i18n } from "@language";
+import logo from "@assets/logo.svg";
 import {
   Listbox,
   ListboxButton,
@@ -457,23 +458,7 @@ const orderedNavGroups = computed<NavGroup[]>(() => {
   <aside class="sidebar glass-strong" :class="{ collapsed: ui.sidebarCollapsed }">
     <div class="sidebar-logo" @click="navigateTo('/')">
       <div class="logo-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          width="28"
-          height="28"
-          :aria-label="i18n.t('common.app_name')"
-          role="img"
-        >
-          <defs>
-            <linearGradient id="sl-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color: #60a5fa" />
-              <stop offset="100%" style="stop-color: #818cf8" />
-            </linearGradient>
-          </defs>
-          <rect x="0" y="0" width="512" height="512" rx="128" fill="url(#sl-logo-grad)" />
-          <rect x="176" y="176" width="160" height="160" rx="48" fill="white" fill-opacity="0.85" />
-        </svg>
+        <img :src="logo" alt="SeaLantern" width="28" height="28" />
       </div>
       <transition name="fade">
         <span v-if="!ui.sidebarCollapsed" class="logo-text">{{ i18n.t("common.app_name") }}</span>

@@ -131,6 +131,11 @@ async function handleManualDownload() {
         <span>{{ updateError }}</span>
       </div>
     </div>
+    <div>
+      <b class="info-label">{{ i18n.t("about.disclaimer") }}</b>
+      <br>
+      <span class="info-value">{{ i18n.t("about.disclaimer_text") }}</span>
+    </div>
   </SLCard>
 </template>
 

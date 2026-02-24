@@ -8,13 +8,10 @@ const { openLink } = useAboutLinks();
 
 <template>
   <div class="links-section">
-    <SLButton variant="primary" size="lg" @click="openLink('https://gitee.com/fps_z/SeaLantern')">
-      {{ i18n.t("about.gitee_repo") }}
-    </SLButton>
     <SLButton
       variant="primary"
       size="lg"
-      @click="openLink('https://github.com/SeaLantern-Studio/SeaLantern')"
+      @click="openLink('https://github.com/zhuxiaojt/SeaLantern-CPE')"
     >
       {{ i18n.t("about.github_repo") }}
     </SLButton>
