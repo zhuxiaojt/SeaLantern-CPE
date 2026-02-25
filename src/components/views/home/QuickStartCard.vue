@@ -2,12 +2,7 @@
 import SLCard from "@components/common/SLCard.vue";
 import SLButton from "@components/common/SLButton.vue";
 import { i18n } from "@language";
-import {
-  currentQuote,
-  displayText,
-  isTyping,
-  updateQuote,
-} from "@utils/quoteUtils";
+import { currentQuote, displayText, isTyping, updateQuote } from "@utils/quoteUtils";
 
 const emit = defineEmits<{
   (e: "create"): void;
@@ -18,6 +13,7 @@ const emit = defineEmits<{
   <SLCard
     :title="i18n.t('home.title')"
     :subtitle="i18n.t('home.create_first')"
+    variant="solid"
     class="quick-start-card"
   >
     <div class="quick-actions">
@@ -44,28 +40,6 @@ const emit = defineEmits<{
   display: flex;
   flex-direction: column;
   height: 280px;
-  padding: var(--sl-space-sm);
-  background: var(--sl-bg-secondary);
-  border: 1px solid var(--sl-border);
-  box-shadow: var(--sl-shadow-sm);
-  border-radius: var(--sl-radius-lg);
-}
-
-.quick-start-card :deep(.sl-card__header) {
-  margin-bottom: var(--sl-space-sm);
-}
-
-.quick-start-card :deep(.sl-card__title) {
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--sl-text-primary);
-  margin-bottom: var(--sl-space-xs);
-}
-
-.quick-start-card :deep(.sl-card__subtitle) {
-  font-size: 0.875rem;
-  color: var(--sl-text-secondary);
-  line-height: 1.4;
 }
 
 .quick-actions {
@@ -79,22 +53,13 @@ const emit = defineEmits<{
   flex-grow: 1;
 }
 
-.quick-start-card :deep(.quote-display) {
-  margin-top: var(--sl-space-md);
-  padding-top: var(--sl-space-md);
-  border-top: 1px solid var(--sl-border-light);
-  text-align: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 .quote-display {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
   padding: var(--sl-space-xs) var(--sl-space-sm);
-  margin-top: var(--sl-space-xs);
+  margin-top: var(--sl-space-md);
   border-top: 1px solid var(--sl-border-light);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -144,8 +109,7 @@ const emit = defineEmits<{
 }
 
 @keyframes quoteLoading {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 0.6;
   }
   50% {
