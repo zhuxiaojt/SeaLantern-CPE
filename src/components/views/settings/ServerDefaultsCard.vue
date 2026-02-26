@@ -108,7 +108,11 @@ const emit = defineEmits<{
             "
           >
             <template #suffix>
+<<<<<<< HEAD
               <button type="button" class="sl-button" @click="emit('browseJavaPath')">
+=======
+              <button type="button" class="sl-input-action" @click="emit('browseJavaPath')">
+>>>>>>> dev
                 {{ i18n.t("settings.browse") }}
               </button>
             </template>
@@ -133,7 +137,7 @@ const emit = defineEmits<{
             "
           >
             <template #suffix>
-              <button type="button" class="sl-button" @click="emit('browseRunPath')">
+              <button type="button" class="sl-input-action" @click="emit('browseRunPath')">
                 {{ i18n.t("settings.browse") }}
               </button>
             </template>
