@@ -24,6 +24,9 @@ Any questions? Try→[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://d
 - Check for and download updates in one click
 
 ## Quick Start
+(Tips:Actually, we already have a documentation site!There you can view all kinds of documents more intuitively and conveniently.You can click here to go to the docs site.)
+
+[Jump to SL Official Doc Site](https://docs.ideaflash.cn/en/intro)
 
 Download the software from [Releases](https://github.com/zhuxiaojt/SeaLantern-CPE/releases/latest);
 
