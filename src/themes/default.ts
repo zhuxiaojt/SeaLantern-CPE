@@ -3,7 +3,7 @@ import type { ThemeDefinition } from "@type/theme";
 export const defaultTheme: ThemeDefinition = {
   id: "default",
   name: "Default",
-  description: "SeaLantern 默认主题 - 清新简洁的蓝绿色调",
+  description: "SeaLantern CPE 默认主题 - 清新简洁的蓝绿色调",
   author: "SeaLantern Team",
   version: "1.0.0",
   light: {

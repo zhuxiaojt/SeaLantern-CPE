@@ -99,7 +99,7 @@ defineExpose({ doScroll });
           line.includes('[ERROR]') || line.includes('ERROR') || line.includes('[STDERR]'),
         'log-warn': line.includes('[WARN]') || line.includes('WARNING'),
         'log-command': line.startsWith('>'),
-        'log-system': line.startsWith('[Sea Lantern]'),
+        'log-system': line.startsWith('[Sea Lantern CPE]'),
       }"
     >
       <!-- 解析日志行，提取时间和等级 -->

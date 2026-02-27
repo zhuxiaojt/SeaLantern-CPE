@@ -1,4 +1,4 @@
-# SeaLantern 语言系统
+# SeaLantern CPE 语言系统
 
 国际化系统支持多语言切换，使用 JSON 文件存储翻译文本。
 
@@ -63,7 +63,7 @@ const t = (key: string) => i18n.t(key);
 {
   "languageName": "English",
   "common": {
-    "app_name": "Sea Lantern",
+    "app_name": "Sea Lantern CPE",
     "home": "Home",
     "settings": "Settings"
   },

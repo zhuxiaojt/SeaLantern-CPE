@@ -183,10 +183,10 @@ async function exportLogs() {
     await navigator.clipboard.writeText(text);
     consoleStore.appendLocal(
       serverId.value,
-      "[Sea Lantern] Logs copied to clipboard (" + logs.length + " lines)",
+      "[Sea Lantern CPE] Logs copied to clipboard (" + logs.length + " lines)",
     );
   } catch (_e) {
-    consoleStore.appendLocal(serverId.value, "[Sea Lantern] Failed to copy logs");
+    consoleStore.appendLocal(serverId.value, "[Sea Lantern CPE] Failed to copy logs");
   }
 }
 

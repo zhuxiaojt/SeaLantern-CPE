@@ -1,4 +1,4 @@
-# Sea Lantern Language System
+# Sea Lantern CPE Language System
 
 The internationalization system supports multiple language switching, using JSON files to store translation texts.
 
@@ -63,7 +63,7 @@ Create a `language-code.json` file in the `language/` directory:
 {
   "languageName": "English",
   "common": {
-    "app_name": "Sea Lantern",
+    "app_name": "Sea Lantern CPE",
     "home": "Home",
     "settings": "Settings"
   },

@@ -138,7 +138,7 @@ mod tests {
     #[test]
     fn normalize_release_tag_version_handles_prerelease_tag() {
         assert_eq!(
-            update_version::normalize_release_tag_version("SeaLantern_release-v1.2.3-rc.1"),
+            update_version::normalize_release_tag_version("SeaLantern_CPE_release-v1.2.3-rc.1"),
             "1.2.3-rc.1"
         );
     }

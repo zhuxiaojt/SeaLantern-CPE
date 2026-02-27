@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "Sea Lantern",
+  "productName": "Sea Lantern CPE",
   "version": "1.0.0",
   "identifier": "com.fpsz.sea-lantern",
   "build": {
@@ -13,7 +13,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "Sea Lantern",
+        "title": "Sea Lantern CPE",
         "width": 1200,
         "height": 720,
         "minWidth": 1000,
@@ -58,6 +58,6 @@
     },
     "publisher": "FPS_Z",
     "shortDescription": "Minecraft 服务器管理器",
-    "longDescription": "Sea Lantern 是一个现代化的 Minecraft 服务器管理工具，支持服务器创建、控制台管理、玩家管理等功能。"
+    "longDescription": "Sea Lantern CPE 是一个一站式 Minecraft 社区平台，支持服务器创建、控制台管理、玩家管理等功能。"
   }
 }

@@ -469,7 +469,7 @@ pub fn run() {
                 TrayIconBuilder::new()
                     .icon(icon)
                     .menu(&menu)
-                    .tooltip("Sea Lantern")
+                    .tooltip("Sea Lantern CPE")
                     .on_menu_event(|app, event| match event.id.as_ref() {
                         "show" => {
                             if let Some(window) = app.get_webview_window("main") {
@@ -519,5 +519,5 @@ pub fn run() {
             Ok(())
         })
         .run(tauri::generate_context!())
-        .expect("error while running Sea Lantern");
+        .expect("error while running Sea Lantern CPE");
 }

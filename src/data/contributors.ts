@@ -1,7 +1,7 @@
 /**
  * 贡献者信息
  *
- * 如果你为 Sea Lantern 做出了贡献，欢迎在这里添加你的信息！
+ * 如果你为 Sea Lantern CPE 做出了贡献，欢迎在这里添加你的信息！
  * 无论是代码、设计、建议、文档还是推广，你的名字都值得被记住。
  */
 
@@ -26,6 +26,15 @@ export const contributors: Contributor[] = [
     url: {
       gitee: "https://gitee.com/fps_z",
       github: "https://github.com/FPSZ",
+    },
+  },
+  {
+    name: "I账户已注销I",
+    role: "CPE 分支主要开发者",
+    avatar: "https://api.rms.net.cn/head/echo500",
+    url: {
+      gitee: "https://gitee.com/zhuxiaojt",
+      github: "https://github.com/zhuxiaojt",
     },
   },
   {
@@ -75,15 +84,6 @@ export const contributors: Contributor[] = [
     url: {
       github: "https://github.com/lmyyds1",
       bilibili: "https://space.bilibili.com/514672422",
-    },
-  },
-  {
-    name: "I账户已注销I",
-    role: "提出了个性化页面，提供了颜色编辑和颜色选择器",
-    avatar: "https://api.rms.net.cn/head/echo500",
-    url: {
-      gitee: "https://gitee.com/zhuxiaojt",
-      github: "https://github.com/zhuxiaojt",
     },
   },
   {

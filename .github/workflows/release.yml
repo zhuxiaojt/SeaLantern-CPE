@@ -122,9 +122,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: ${{ needs.validate-tag.outputs.tag }}
-          releaseName: "Sea Lantern v${{ needs.validate-tag.outputs.version }}"
+          releaseName: "Sea Lantern CPE v${{ needs.validate-tag.outputs.version }}"
           releaseBody: |
-            ## 发布 Sea Lantern v${{ needs.validate-tag.outputs.version }}
+            ## 发布 Sea Lantern CPE v${{ needs.validate-tag.outputs.version }}
 
             自动发布构建产物。
           releaseDraft: true

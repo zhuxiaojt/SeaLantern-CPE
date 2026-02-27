@@ -4,7 +4,7 @@
 
 [We've got a document site,press here to redirect.](https://docs.ideaflash.cn/en/intro)
 
-感谢你对 Sea Lantern 项目的关注！这份文档将帮助你了解如何为项目做出贡献。
+感谢你对 Sea Lantern CPE 项目的关注！这份文档将帮助你了解如何为项目做出贡献。
 
 ## ⭐可接受PR贡献的范围
 

@@ -10,7 +10,7 @@ defineProps<{
 <template>
   <div class="hero-section">
     <div class="hero-logo">
-      <img :src="logo" alt="Sea Lantern" width="72" height="72" />
+      <img :src="logo" alt="Sea Lantern CPE" width="72" height="72" />
     </div>
     <h1 class="hero-title">Sea Lantern CPE</h1>
     <p class="hero-subtitle">{{ i18n.t("about.subtitle") }}</p>

@@ -2,19 +2,19 @@
 Type=Application
 Name=SeaLantern
 GenericName=Minecraft Server Manager
-Comment=一个轻量化的 Minecraft 服务器管理工具
+Comment=一站式 Minecraft 社区平台
 Exec=/usr/bin/sealantern
 Icon=sealantern
 Terminal=false
 Categories=Game;Utility;
 Keywords=minecraft;server;manager;mc;服务器;管理;
-StartupWMClass=Sea Lantern
+StartupWMClass=Sea Lantern CPE
 MimeType=application/x-minecraft-server;x-scheme-handler/minecraft;
 
 # 添加启动通知和 StartupWMClass 确保正确分组
 StartupNotify=true
 
 # 添加多语言支持
-Name[zh_CN]=SeaLantern
-GenericName[zh_CN]=Minecraft 服务器管理器
-Comment[zh_CN]=一个轻量化的 Minecraft 服务器管理工具
+Name[zh_CN]=SeaLantern CPE
+GenericName[zh_CN]=Minecraft 社区平台
+Comment[zh_CN]=一站式 Minecraft 社区平台

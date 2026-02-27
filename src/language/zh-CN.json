@@ -658,7 +658,7 @@
     "way_promote_desc": "分享给更多 MC 玩家",
     "gitee_repo": "Gitee 仓库",
     "bilibili": "B站主页",
-    "footer_text1": "Sea Lantern 是一个开源项目，遵循 GPLv3 协议。",
+    "footer_text1": "Sea Lantern CPE 是一个开源项目，遵循 GPLv3 协议。",
     "footer_text2": "Minecraft 是 Mojang Studios 的注册商标。本项目与 Mojang 无关。",
     "footer_quote": "\"我们搭建了骨架，而灵魂，交给你们。\"",
     "update_checking": "检查中...",
@@ -895,7 +895,7 @@
   "console-demo": {
     "enable": {
       "title": "========== Console Demo 插件已启用 ==========",
-      "no_servers": "没有找到任何服务器，请先在 SeaLantern 中添加服务器",
+      "no_servers": "没有找到任何服务器，请先在 SeaLantern CPE 中添加服务器",
       "demo_end": "========== Console Demo 演示结束 =========="
     },
     "console": {

@@ -91,7 +91,7 @@ pub fn handle_cli() {
 
 #[allow(dead_code)]
 fn print_help() {
-    println!("Sea Lantern - Minecraft Server Manager (CLI Mode)");
+    println!("Sea Lantern CPE - Minecraft Server Manager (CLI Mode)");
     println!("\n用法:");
     println!("  cli / --cli      进入交互式命令行模式");
     println!("  list             列出所有服务器");
@@ -245,7 +245,7 @@ fn resolve_server_id(id: &str) {
 
 #[allow(dead_code)]
 fn run_interactive_cli() {
-    println!("欢迎使用 Sea Lantern 交互式命令行模式！输入 'help' 查看命令。");
+    println!("欢迎使用 Sea Lantern CPE 交互式命令行模式！输入 'help' 查看命令。");
     loop {
         print!("> ");
         io::stdout().flush().unwrap();

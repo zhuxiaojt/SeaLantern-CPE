@@ -64,7 +64,7 @@ export function getServerStatusText(status: string): string {
 
 // ==================== 日志前缀 ====================
 export const LOG_PREFIX = {
-  SEA_LANTERN: "[Sea Lantern]",
+  SEA_LANTERN: "[Sea Lantern CPE]",
   ERROR: "[ERROR]",
   WARN: "[WARN]",
   STDERR: "[STDERR]",

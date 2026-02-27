@@ -13,8 +13,8 @@ _update_icon_cache() {
 }
 
 _show_completion_message() {
-    echo ":: SeaLantern 安装完成！"
-    echo ":: 你可以通过应用程序菜单启动 SeaLantern"
+    echo ":: SeaLantern CPE 安装完成！"
+    echo ":: 你可以通过应用程序菜单启动 SeaLantern CPE"
     echo ":: 或直接在终端执行 'sealantern' 命令"
 }
 
@@ -31,7 +31,7 @@ pre_upgrade() {
 post_upgrade() {
     _update_desktop_database
     _update_icon_cache
-    echo ":: SeaLantern 升级完成！"
+    echo ":: SeaLantern CPE 升级完成！"
 }
 
 pre_remove() {
@@ -41,5 +41,5 @@ pre_remove() {
 post_remove() {
     _update_desktop_database
     _update_icon_cache
-    echo ":: SeaLantern 已移除"
+    echo ":: SeaLantern CPE 已移除"
 }

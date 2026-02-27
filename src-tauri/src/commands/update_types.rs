@@ -62,8 +62,8 @@ impl RepoConfig {
 /// 获取 GitHub 仓库配置
 pub fn get_github_config() -> RepoConfig {
     RepoConfig {
-        owner: "SeaLantern-Studio",
-        repo: "SeaLantern",
+        owner: "zhuxiaojt",
+        repo: "SeaLantern-CPE",
         api_base: "https://api.github.com/repos",
     }
 }

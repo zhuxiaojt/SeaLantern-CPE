@@ -4,12 +4,11 @@
 
 ## 项目概览
 
-**项目名称**: 海晶灯 (Sea Lantern)
+**项目名称**: 海晶灯社区平台版 (Sea Lantern CPE)
 **项目类型**: Minecraft 服务器管理工具
 **技术栈**: Tauri 2 + Rust + Vue 3 + TypeScript + Pinia
-**当前版本**: 0.6.5
-**Gitee仓库**: https://gitee.com/fps_z/SeaLantern (master 分支)
-**Github仓库**: https://github.com/FPSZ/SeaLantern (main 分支)
+**当前版本**: 1.0.0
+**Github仓库**: https://github.com/zhuxiaojt/SeaLantern-CPE
 
 ### 核心特点
 
@@ -706,11 +705,10 @@ fn process_server(server: &ServerInstance) -> Result<(), String> {
 
 ## 联系方式
 
-- Gitee: https://gitee.com/fps_z/SeaLantern
-- B站: https://space.bilibili.com/1192466596
+- Github: https://github.com/zhuxiaojt/SeaLantern-CPE
 
 ---
 
 **最后更新**: 2026-02-22
 **文档版本**: 1.2
-**当前项目版本**: 0.6.5
+**当前项目版本**: 1.0.0

@@ -1,8 +1,8 @@
-# Sea Lantern 项目结构
+# Sea Lantern CPE 项目结构
 
 ## 项目概览
 
-Sea Lantern（海晶灯）是一个轻量化的 Minecraft 服务器管理工具，基于 Tauri 2 + Rust + Vue 3 技术栈。
+Sea Lantern CPE（海晶灯社区平台版）是一个轻量化的 Minecraft 服务器管理工具，基于 Tauri 2 + Rust + Vue 3 技术栈。
 
 ## 详细结构
 

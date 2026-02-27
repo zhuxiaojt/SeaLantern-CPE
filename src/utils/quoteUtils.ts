@@ -107,7 +107,7 @@ async function fetchHitokoto(): Promise<Quote> {
     return quote;
   } catch (error) {
     console.error("Error fetching hitokoto:", error);
-    const defaultQuote = { text: i18n.t("common.quote_text"), author: "Sea Lantern" };
+    const defaultQuote = { text: i18n.t("common.quote_text"), author: "Sea Lantern CPE" };
     return defaultQuote;
   }
 }

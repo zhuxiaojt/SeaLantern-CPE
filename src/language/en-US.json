@@ -693,7 +693,7 @@
     "way_promote_desc": "Share with more MC players",
     "gitee_repo": "Gitee Repository",
     "bilibili": "Bilibili Channel",
-    "footer_text1": "Sea Lantern is an open-source project under GPLv3 license.",
+    "footer_text1": "Sea Lantern CPE is an open-source project under GPLv3 license.",
     "footer_text2": "Minecraft is a registered trademark of Mojang Studios. This project is not affiliated with Mojang.",
     "footer_quote": "\"We built the skeleton, and the soul is up to you.\"",
     "update_checking": "Checking...",
@@ -929,7 +929,7 @@
   "console-demo": {
     "enable": {
       "title": "========== Console Demo Plugin Enabled ==========",
-      "no_servers": "No servers found, please add a server in SeaLantern first",
+      "no_servers": "No servers found, please add a server in SeaLantern CPE first",
       "demo_end": "========== Console Demo Demo End =========="
     },
     "console": {

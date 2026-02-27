@@ -214,21 +214,21 @@ impl I18nService {
 
     fn load_zh_cn() -> HashMap<String, String> {
         let mut map = HashMap::new();
-        map.insert("app.title".to_string(), "SeaLantern".to_string());
+        map.insert("app.title".to_string(), "SeaLantern CPE".to_string());
         map.insert("app.subtitle".to_string(), "Minecraft 服务器管理器".to_string());
         map
     }
 
     fn load_en_us() -> HashMap<String, String> {
         let mut map = HashMap::new();
-        map.insert("app.title".to_string(), "SeaLantern".to_string());
+        map.insert("app.title".to_string(), "SeaLantern CPE".to_string());
         map.insert("app.subtitle".to_string(), "Minecraft Server Manager".to_string());
         map
     }
 
     fn load_zh_tw() -> HashMap<String, String> {
         let mut map = HashMap::new();
-        map.insert("app.title".to_string(), "SeaLantern".to_string());
+        map.insert("app.title".to_string(), "SeaLantern CPE".to_string());
         map.insert("app.subtitle".to_string(), "Minecraft 伺服器管理器".to_string());
         map
     }

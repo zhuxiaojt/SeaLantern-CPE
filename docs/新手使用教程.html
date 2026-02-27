@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sea Lantern（海晶灯）新手使用教程</title>
+    <title>Sea Lantern CPE（海晶灯社区平台版）新手使用教程</title>
     <style>
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -133,7 +133,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Sea Lantern（海晶灯）新手使用教程</h1>
+      <h1>Sea Lantern CPE（海晶灯社区平台版）新手使用教程</h1>
 
       <div class="version-info">
         <p><strong>文档版本：</strong>0.0.1</p>
@@ -143,8 +143,9 @@
       <div class="highlight">
         <h2>项目概述</h2>
         <p>
-          <strong>Sea Lantern（海晶灯）</strong>是一个专为Minecraft服务器设计的管理工具。它使用Tauri
-          2 + Rust + Vue 3技术栈开发，具有启动快、体积小、内存占用少的特点。
+          <strong>Sea Lantern CPE（海晶灯社区平台版）</strong
+          >是一个专为Minecraft服务器设计的管理工具。它使用Tauri 2 + Rust + Vue
+          3技术栈开发，具有启动快、体积小、内存占用少的特点。
         </p>
       </div>
 
@@ -218,15 +219,15 @@
         <h3>下载与安装</h3>
         <ol>
           <li>
-            <strong>下载Sea Lantern</strong>
+            <strong>下载Sea Lantern CPE</strong>
             <ul>
-              <li>访问Sea Lantern的发布页面（Gitee）</li>
+              <li>访问Sea Lantern CPE的发布页面（Github）</li>
               <li>下载最新版本的安装包</li>
               <li>根据你的操作系统选择相应的版本（Windows、macOS、Linux）</li>
             </ul>
           </li>
           <li>
-            <strong>安装Sea Lantern</strong>
+            <strong>安装Sea Lantern CPE</strong>
             <ul>
               <li>Windows用户：运行下载的<code>.exe</code>安装文件</li>
               <li>macOS用户：运行<code>.dmg</code>文件</li>
@@ -329,9 +330,9 @@
       <h3>创建第一个Minecraft服务器</h3>
       <ol>
         <li>
-          <strong>启动Sea Lantern</strong>
+          <strong>启动Sea Lantern CPE</strong>
           <ul>
-            <li>双击桌面图标启动Sea Lantern</li>
+            <li>双击桌面图标启动Sea Lantern CPE</li>
             <li>等待应用加载完成（你会看到启动画面）</li>
           </ul>
         </li>
@@ -348,7 +349,7 @@
         <li>
           <strong>配置Java环境</strong>
           <ul>
-            <li>Sea Lantern会自动检测系统中的Java环境</li>
+            <li>Sea Lantern CPE会自动检测系统中的Java环境</li>
             <li>如果自动检测失败，可以手动指定Java路径</li>
             <li>
               点击"Java检测"按钮，选择合适的Java版本（推荐使用与你的Minecraft版本兼容的Java版本）
@@ -520,14 +521,14 @@
           </li>
         </ol>
 
-        <h3>使用Sea Lantern管理插件</h3>
-        <p>虽然Sea Lantern目前没有专门的插件管理界面，但你可以通过以下方式使用它来管理插件：</p>
+        <h3>使用Sea Lantern CPE管理插件</h3>
+        <p>虽然Sea Lantern CPE目前没有专门的插件管理界面，但你可以通过以下方式使用它来管理插件：</p>
         <ul>
-          <li><strong>启动服务器</strong>：使用Sea Lantern启动服务器时会自动加载插件</li>
+          <li><strong>启动服务器</strong>：使用Sea Lantern CPE启动服务器时会自动加载插件</li>
           <li><strong>查看日志</strong>：通过控制台查看插件是否正确加载</li>
           <li><strong>执行命令</strong>：某些插件需要在启动后执行特定命令来完成安装</li>
           <li><strong>查看插件列表</strong>：使用<code>/plugins</code>命令查看已加载的插件</li>
-          <li><strong>停止服务器</strong>：使用Sea Lantern停止服务器以安全地修改插件</li>
+          <li><strong>停止服务器</strong>：使用Sea Lantern CPE停止服务器以安全地修改插件</li>
         </ul>
 
         <h3>常见插件类型</h3>
@@ -611,7 +612,7 @@
         <ol>
           <li>检查服务器是否正常运行</li>
           <li>确认网络连接正常</li>
-          <li>重启Sea Lantern应用</li>
+          <li>重启Sea Lantern CPE应用</li>
         </ol>
 
         <h3>无法连接服务器</h3>
@@ -624,11 +625,11 @@
       </div>
 
       <h2>开发者指南</h2>
-      <p>如果你想参与Sea Lantern的开发：</p>
+      <p>如果你想参与Sea Lantern CPE的开发：</p>
 
       <h3>1. 克隆项目</h3>
-      <pre><code>git clone https://gitee.com/fps_z/SeaLantern.git
-cd SeaLantern</code></pre>
+      <pre><code>git clone https://github.com/zhuxiaojt/SeaLantern-CPE.git
+cd SeaLantern-CPE</code></pre>
 
       <h3>2. 安装依赖</h3>
       <pre><code>npm install</code></pre>
@@ -641,7 +642,7 @@ cd SeaLantern</code></pre>
       <p>构建产物位于 <code>src-tauri/target/release/bundle/</code> 目录中。</p>
 
       <h2>技术架构</h2>
-      <p>Sea Lantern采用前后端分离架构：</p>
+      <p>Sea Lantern CPE采用前后端分离架构：</p>
       <ul>
         <li><strong>前端</strong>：Vue 3 + TypeScript + Vite + Pinia</li>
         <li><strong>后端</strong>：Rust + Tauri 2</li>
@@ -650,7 +651,7 @@ cd SeaLantern</code></pre>
       </ul>
 
       <h2>贡献项目</h2>
-      <p>如果你希望为Sea Lantern贡献代码：</p>
+      <p>如果你希望为Sea Lantern CPE贡献代码：</p>
       <ol>
         <li>Fork这个仓库</li>
         <li>创建新分支进行开发</li>
@@ -665,9 +666,10 @@ cd SeaLantern</code></pre>
           <th>答案</th>
         </tr>
         <tr>
-          <td>Sea Lantern需要什么权限？</td>
+          <td>Sea Lantern CPE需要什么权限？</td>
           <td>
-            Sea Lantern需要访问文件系统、网络和执行程序的权限，这些是管理Minecraft服务器所必需的。
+            Sea Lantern
+            CPE需要访问文件系统、网络和执行程序的权限，这些是管理Minecraft服务器所必需的。
           </td>
         </tr>
         <tr>
@@ -675,20 +677,22 @@ cd SeaLantern</code></pre>
           <td>目前需要手动备份服务器目录，未来版本将集成备份功能。</td>
         </tr>
         <tr>
-          <td>Sea Lantern是否安全？</td>
+          <td>Sea Lantern CPE是否安全？</td>
           <td>
-            Sea
-            Lantern是开源软件，代码完全透明。它不会连接到任何第三方服务器，所有数据都保存在本地。
+            Sea Lantern
+            CPE是开源软件，代码完全透明。它不会连接到任何第三方服务器，所有数据都保存在本地。
           </td>
         </tr>
         <tr>
           <td>支持哪些Minecraft版本？</td>
-          <td>Sea Lantern支持所有标准的Minecraft服务器版本，只需使用对应版本的服务器JAR文件。</td>
+          <td>
+            Sea Lantern CPE支持所有标准的Minecraft服务器版本，只需使用对应版本的服务器JAR文件。
+          </td>
         </tr>
         <tr>
-          <td>可以在Windows 7/8/8.1上运行Sea Lantern吗？</td>
+          <td>可以在Windows 7/8/8.1上运行Sea Lantern CPE吗？</td>
           <td>
-            Sea Lantern官方不支持Windows 7/8/8.1系统。默认情况下Sea Lantern不支持原生Windows
+            Sea Lantern CPE官方不支持Windows 7/8/8.1系统。默认情况下Sea Lantern CPE不支持原生Windows
             7运行，但可以通过安装VxKex扩展内核以补全所需运行库来运行。详情请参考"旧版Windows运行方案"章节。
           </td>
         </tr>
@@ -697,7 +701,7 @@ cd SeaLantern</code></pre>
       <div class="warning">
         <h2>旧版Windows运行方案</h2>
         <p>
-          关于Sea Lantern在Win10以下系统运行：默认情况下Sea Lantern不支持原生Windows
+          关于Sea Lantern CPE在Win10以下系统运行：默认情况下Sea Lantern CPE不支持原生Windows
           7运行，通过安装VxKex
           扩展内核以补全所需运行库来运行，这对已然处于旧系统的用户提供了一个解决方案（注：此方式同样适用于一些无法在老系统上正常运行的软件）
         </p>
@@ -705,10 +709,10 @@ cd SeaLantern</code></pre>
         <h3>具体步骤</h3>
         <ol>
           <li>
-            <strong>获取Sea Lantern软件压缩包</strong>：
+            <strong>获取Sea Lantern CPE软件压缩包</strong>：
             <ul>
-              <li>前往Sea Lantern官网下载Windows压缩包</li>
-              <li>解压完成不要打开Sea Lantern</li>
+              <li>前往Sea Lantern CPE官网下载Windows压缩包</li>
+              <li>解压完成不要打开Sea Lantern CPE</li>
             </ul>
           </li>
           <li>
@@ -737,11 +741,11 @@ cd SeaLantern</code></pre>
             </ul>
           </li>
           <li>
-            <strong>给Sea Lantern启用VxKex</strong>：
+            <strong>给Sea Lantern CPE启用VxKex</strong>：
             <ul>
-              <li>右键Sea Lantern主程序，选择属性，选择[VxKex]</li>
+              <li>右键Sea Lantern CPE主程序，选择属性，选择[VxKex]</li>
               <li>勾选[为此程序启用VxKex NEXT]和[报告其他版本的Windows]，应用，确定</li>
-              <li>此时Sea Lantern即可在Windows 7上正常运行</li>
+              <li>此时Sea Lantern CPE即可在Windows 7上正常运行</li>
               <li>除联机外，其他功能均正常</li>
             </ul>
           </li>
@@ -764,7 +768,7 @@ cd SeaLantern</code></pre>
       </div>
 
       <h2>未来功能</h2>
-      <p>Sea Lantern持续开发中，以下功能正在计划中：</p>
+      <p>Sea Lantern CPE持续开发中，以下功能正在计划中：</p>
       <ul>
         <li>下载中心（下载服务端核心、插件、模组）</li>
         <li>备份管理（世界存档的增量备份和还原）</li>
@@ -778,18 +782,18 @@ cd SeaLantern</code></pre>
       <div class="highlight">
         <h2>总结</h2>
         <p>
-          Sea
-          Lantern是一个功能强大且易于使用的Minecraft服务器管理工具。通过本教程，你应该已经学会了如何安装、配置和管理Minecraft服务器。如果遇到问题，可以查看控制台日志获取更多信息，或者在项目社区中寻求帮助。
+          Sea Lantern
+          CPE是一个功能强大且易于使用的Minecraft社区平台。通过本教程，你应该已经学会了如何安装、配置和管理Minecraft服务器。如果遇到问题，可以查看控制台日志获取更多信息，或者在项目社区中寻求帮助。
         </p>
       </div>
 
       <div class="warning">
         <h2>重要警告与免责声明</h2>
-        <p><strong>关于在旧版Windows系统上运行Sea Lantern的警告：</strong></p>
+        <p><strong>关于在旧版Windows系统上运行Sea Lantern CPE的警告：</strong></p>
         <ul>
           <li>
-            使用非官方方法（如VxKex扩展内核）在Windows 7/8/8.1等旧版系统上运行Sea
-            Lantern<strong>并不保证能正常工作</strong>，可能会出现各种错误和兼容性问题。
+            使用非官方方法（如VxKex扩展内核）在Windows 7/8/8.1等旧版系统上运行Sea Lantern
+            CPE<strong>并不保证能正常工作</strong>，可能会出现各种错误和兼容性问题。
           </li>
           <li>
             <strong
@@ -799,7 +803,7 @@ cd SeaLantern</code></pre>
           <li>使用此类方法可能存在系统安全风险，用户需自行承担相关责任。</li>
           <li>强烈建议升级到受支持的Windows版本（Windows 10/11）以获得最佳体验和完整功能支持。</li>
           <li>
-            Sea Lantern的开发和测试均基于现代Windows系统，对旧版系统的兼容性不在官方支持范围内。
+            Sea Lantern CPE的开发和测试均基于现代Windows系统，对旧版系统的兼容性不在官方支持范围内。
           </li>
         </ul>
       </div>
@@ -818,7 +822,7 @@ cd SeaLantern</code></pre>
               <strong>B站主页：</strong
               ><a href="https://b23.tv/bbK4irn" target="_blank">https://b23.tv/bbK4irn</a>
             </p>
-            <p><strong>修改时间：</strong>2026-02-14 16:37:07</p>
+            <p><strong>修改时间：</strong>2026-02-27 7:53:07</p>
           </div>
         </div>
       </div>
