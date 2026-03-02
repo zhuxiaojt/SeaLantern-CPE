@@ -5,8 +5,8 @@
 
 A Minecraft Server Manager based on Tauri 2 + Rust + Vue 3
 
-| [![github-stars](https://img.shields.io/github/stars/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Stars)](https://github.com/zhuxiaojt/SeaLantern-CPE/stargazers) | [![github-forks](https://img.shields.io/github/forks/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Forks)](https://github.com/zhuxiaojt/SeaLantern-CPE/network/members) | [![github-latest](https://img.shields.io/github/v/release/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Latest%20version)](https://github.com/zhuxiaojt/SeaLantern-CPE/releases/latest)                                                                                    |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![github-stars](https://img.shields.io/github/stars/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Stars)](https://github.com/zhuxiaojt/SeaLantern-CPE/stargazers) | [![github-forks](https://img.shields.io/github/forks/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Forks)](https://github.com/zhuxiaojt/SeaLantern-CPE/network/members) | [![github-latest](https://img.shields.io/github/v/release/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Latest%20version)](https://github.com/zhuxiaojt/SeaLantern-CPE/releases/latest) |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 <kbd>[简体中文](README.md)</kbd> <kbd>English</kbd>
 
@@ -110,6 +110,15 @@ cargo fmt --all
 </details>
 
 CI automated checks are set up to ensure that all submitted code meets the standards.
+
+### Commit Gatekeeping (Enabled)
+
+- Local `pre-commit`: auto-formats staged frontend files via `lint-staged` + `oxfmt`
+- Local `commit-msg`: enforces Conventional Commits format
+- CI: re-validates commit messages and code quality on PR/push
+
+Allowed commit types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `revert`, `security`  
+Example: `feat(plugin): add retry logic for plugin downloads`
 
 ## Tech Stack
 

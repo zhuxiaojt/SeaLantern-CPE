@@ -6,8 +6,8 @@
 
 一个轻量化的 Minecraft 社区平台，基于 Tauri 2 + Rust + Vue 3
 
-| [![github-stars](https://img.shields.io/github/stars/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Stars)](https://github.com/zhuxiaojt/SeaLantern-CPE/stargazers) | [![github-forks](https://img.shields.io/github/forks/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Forks)](https://github.com/zhuxiaojt/SeaLantern-CPE/network/members) | [![github-latest](https://img.shields.io/github/v/release/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=最新版本)](https://github.com/zhuxiaojt/SeaLantern-CPE/releases/latest)                                                                                    |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![github-stars](https://img.shields.io/github/stars/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Stars)](https://github.com/zhuxiaojt/SeaLantern-CPE/stargazers) | [![github-forks](https://img.shields.io/github/forks/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=Forks)](https://github.com/zhuxiaojt/SeaLantern-CPE/network/members) | [![github-latest](https://img.shields.io/github/v/release/zhuxiaojt/SeaLantern-CPE?style=flat&logo=github&label=最新版本)](https://github.com/zhuxiaojt/SeaLantern-CPE/releases/latest) |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 <kbd>简体中文</kbd> <kbd>[English](README-en.md)</kbd>
 
@@ -109,6 +109,15 @@ cargo fmt --all
 </details>
 
 项目已配置 CI 自动检查，确保所有提交的代码都符合规范。
+
+### 提交规范自动检查（已启用）
+
+- 本地 `pre-commit`：自动对暂存区前端文件执行 `oxfmt`（通过 `lint-staged`）
+- 本地 `commit-msg`：强制提交信息符合 Conventional Commits
+- CI：在 PR/推送时再次校验提交信息与代码质量
+
+允许的提交类型：`build`、`ci`、`feat`、`fix`、`docs`、`style`、`refactor`、`perf`、`test`、`types`、`chore`、`revert`、`security`、`i18n`  
+示例：`feat(plugin): 增加插件下载重试机制`
 
 ## 技术栈
 
